@@ -45,7 +45,7 @@ const genBuildInfoStr = () => {
 	const deployedSHA = import.meta.env.VERCEL_GIT_COMMIT_SHA?.trim()?.slice(0, 7);
 	const isVercel = import.meta.env.VERCEL === '1';
 	let str = `Build at ${new Date(import.meta.env.VITE_BUILD_TIMESTAMP).toISOString()} `;
-	deployedSHA && (str += `with commit <a href="https://github.com/LateDreamXD/mcisee-next/commit/${deployedSHA}" target="_blank"><code>${deployedSHA}</code></a>`);
+	deployedSHA && (str += `with commit <a href="https://github.com/LateDreamXD/mcisee-next/commit/${deployedSHA}" target="_blank" rel="noopener"><code>${deployedSHA}</code></a>`);
 	isVercel && (str += ` on Vercel`);
 	return str;
 }
