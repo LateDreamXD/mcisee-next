@@ -40,7 +40,7 @@ const switchTheme = () => {
 	stores.coreStore.setTheme(nextTheme);
 }
 
-const isPreview = import.meta.env.VITE_IS_PREVIEW;
+const isPreview = JSON.parse(import.meta.env.VITE_IS_PREVIEW) as boolean;
 const genBuildInfoStr = () => {
 	const deployedSHA = import.meta.env.VERCEL_GIT_COMMIT_SHA?.trim()?.slice(0, 7);
 	const isVercel = import.meta.env.VERCEL === '1';
