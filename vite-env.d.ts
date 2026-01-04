@@ -6,6 +6,7 @@ interface ViteTypeOptions {
 
 interface ImportMetaEnv {
 	readonly VITE_IS_PREVIEW: boolean
+	readonly VITE_BUILD_TIMESTAMP: number
 }
 
 interface ImportMeta {
